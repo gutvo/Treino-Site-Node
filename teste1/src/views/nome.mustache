@@ -1,0 +1,23 @@
+{{>partials/header}}
+<h2 class="text-center">Formulário</h2>
+<form method="GET">
+
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Nome</label>
+  <input type="text" name="nome" class="form-control" id="exampleFormControlInput1" placeholder="digite seu nome">
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Idade</label>
+  <input type="text" name="idade" class="form-control" id="exampleFormControlInput1" placeholder="digite sua idade">
+</div>
+    <input style="width:100%;" class="btn btn-success" type="submit" values="Enviar">
+</form>
+
+
+<hr/>
+<div class="alert alert-success" role="alert">
+    {{#nome}}
+        olá {{nome}}, tudo bem? sua idade é de {{idade}}
+    {{/nome}}
+</div>
+{{>partials/footer}}

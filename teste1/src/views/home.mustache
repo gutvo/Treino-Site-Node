@@ -1,0 +1,26 @@
+{{>partials/header}}
+    {{#exibe}}
+        olá {{nome}}
+    {{/exibe}}
+    <hr/>
+    <h2 class="text-center">Lista de produtos</h2>
+    <ul>
+    {{#produtos}}
+        {{>partials/produtoItem}}
+    {{/produtos}}
+    </ul>
+    <hr/>
+    <h2 class="text-center">Lista de produtos com preços maiores de 12</h2>
+    <ul>
+    {{#caros}}
+        {{>partials/produtoItem}}
+    {{/caros}}
+    </ul>
+    <hr/>
+    <h2 class="text-center">Mensagem</h2>
+    <ul>
+        {{#saudacoes}}
+            <li>{{.}}</li>
+        {{/saudacoes}}
+    </ul>
+{{>partials/footer}}
